@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240702182045">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="home.html" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="about-us.html" class="menu__link">About Us</a></li>
+							<li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
+							<li class="menu__item"><a href="services.html" class="menu__link">Services</a></li>
+							<li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
+							<li class="menu__item"><a href="services.html" class="menu__link">Services</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href="#" class="header__link-logo logo">
+					<svg class="logo__logo-icon">
+						<use xlink:href="img/icons/icons.svg#logo"></use>
+					</svg>
+				</a>
+				<div class="header__actions">
+					<div class="header__auth auth-header">
+						<div class="auth-header__log-in-item">
+							<button type="button" data-popup="#log-in" class="auth-header__log-in">Login</button>
+							<button type="button" data-tippy-content="Log in" data-popup="#log-in" class="auth-header__icon-log-in">
+								<svg class="auth-header__login-icon">
+									<use xlink:href="img/icons/icons.svg#log-in"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="auth-header__register-item">
+							<button type="button" data-popup="#register" class="auth-header__register">Registration</button>
+							<button type="button" data-tippy-content="Registration" data-popup="#register" class="auth-header__icon-register">
+								<svg class="auth-header__register-icon">
+									<use xlink:href="img/icons/icons.svg#registration"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="auth-header__contacts-item">
+							<button type="button" data-popup="#contacts" class="auth-header__contacts">Contacts</button>
+							<button type="button" data-tippy-content="Contacts" data-popup="#contacts" class="auth-header__icon-contacts">
+								<svg class="auth-header__contact-icon">
+									<use xlink:href="img/icons/icons.svg#contacts"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="log-in" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="18" height="18" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.73333 1.48883L21.5469 21.0288" stroke="#c1b081" stroke-linecap="square" />
+							<path d="M21.2667 1.48883L1.45309 21.0288" stroke="#c1b081" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text">
+						<form data-goto-error action="#" class="popup__form form">
+							<div class="form__mail-item">
+								<input data-error="Invalid email entered" data-required="email" data-validate="email" autocomplete="off" required type="email" name="form[]" placeholder="Email" class="form__mail-input">
+							</div>
+							<div class="form__pass-forgot-items">
+								<div class="form__password">
+									<input autocomplete="off" type="password" name="form[]" value="123456" class="form__pass-input">
+									<button class="form__viewpass" type="button"></button>
+								</div>
+								<div class="form__forgot-item">
+									<a href="#" class="form__link">Forgot Password</a>
+								</div>
+							</div>
+							<div class="form__check-button-items">
+								<div class="form__checkbox checkbox">
+									<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox__label">Remember me</label>
+								</div>
+								<button type="submit" class="form__button-item">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="register" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="18" height="18" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.73333 1.48883L21.5469 21.0288" stroke="#c1b081" stroke-linecap="square" />
+							<path d="M21.2667 1.48883L1.45309 21.0288" stroke="#c1b081" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text">
+						<form data-goto-error action="#" class="popup__form form">
+							<div class="form__mail-item">
+								<input data-error="Invalid email entered" data-required="email" data-validate="email" autocomplete="off" required type="email" name="form[]" placeholder="Your Email" class="form__mail-input">
+							</div>
+							<div class="form__name-item">
+								<input autocomplete="off" required type="text" name="form[]" placeholder="Your Name" class="form__name-input">
+							</div>
+							<div class="form__password-item">
+								<input autocomplete="off" type="password" name="form[]" value="123456" class="form__pass-input">
+							</div>
+							<div class="form__confirm-pass">
+								<input autocomplete="off" type="password" name="form[]" value="123456" class="form__pass-input">
+							</div>
+							<button type="submit" class="form__button-register">Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contacts" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="18" height="18" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.73333 1.48883L21.5469 21.0288" stroke="#c1b081" stroke-linecap="square" />
+							<path d="M21.2667 1.48883L1.45309 21.0288" stroke="#c1b081" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text">
+						<div class="popup__info-item">
+							<p>
+								Here are our phones. If you have any questions, please call us! Our operators with big pleasure
+								answer for your questions
+							</p>
+							<a href="tel:+782949999977" class="popup__link-phone">+7 8294 999-99-77</a>
+							<a href="tel:+782949999977" class="popup__link-phone">+7 8294 999-99-76</a>
+							<a href="tel:+782949999977" class="popup__link-phone">+7 8294 999-99-75</a>
+							<a href="tel:+782949999977" class="popup__link-phone">+7 8294 999-99-77</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="video-pets" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="18" height="18" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d=" M1.73333 1.48883L21.5469 21.0288" stroke="#c1b081" stroke-linecap="square" />
+							<path d=" M21.2667 1.48883L1.45309 21.0288" stroke="#c1b081" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div data-youtube-place class="popup__text">
+						<div class="popup__pet-video">
+							<video controls width="100%" src="img/main/contact/video/pet-services.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<div class="better-world">
+				<div class="better-world__container">
+					<div class="better-world__slider swiper">
+						<div class="better-world__wrapper swiper-wrapper">
+							<div class="better-world__slide-better-world slide-better-world swiper-slide">
+								<div class="slide-better-world__content">
+									<div class="slide-better-world__title-item">
+										<h1>A better world for pets</h1>
+									</div>
+									<a href="#" class="slide-better-world__link-button" target="_blank">Explore</a>
+								</div>
+								<div class="slide-better-world__body">
+									<div class="slide-better-world__picture">
+										<img src="img/main/better-world/white-dog.webp" alt="The white dog" class="slide-better-world__image">
+									</div>
+								</div>
+							</div>
+							<div class="better-world__slide-better-world slide-better-world swiper-slide">
+								<div class="slide-better-world__content">
+									<div class="slide-better-world__title-item">
+										<h1>A better medicine for pets</h1>
+									</div>
+									<a href="#" class="slide-better-world__link-button" target="_blank">Explore</a>
+								</div>
+								<div class="slide-better-world__body">
+									<div class="slide-better-world__picture">
+										<img src="img/main/better-world/orange-cat.webp" alt="The white dog" class="slide-better-world__image">
+									</div>
+								</div>
+							</div>
+							<div class="better-world__slide-better-world slide-better-world swiper-slide">
+								<div class="slide-better-world__content">
+									<div class="slide-better-world__title-item">
+										<h1>A better equipment for pets</h1>
+									</div>
+									<a href="#" class="slide-better-world__link-button" target="_blank">Explore</a>
+								</div>
+								<div class="slide-better-world__body">
+									<div class="slide-better-world__picture">
+										<img src="img/main/better-world/german-shepherd.webp" alt="The white dog" class="slide-better-world__image">
+									</div>
+								</div>
+							</div>
+							<div class="better-world__slide-better-world slide-better-world swiper-slide">
+								<div class="slide-better-world__content">
+									<div class="slide-better-world__title-item">
+										<h1>A better toys for pets</h1>
+									</div>
+									<a href="#" class="slide-better-world__link-button" target="_blank">Explore</a>
+								</div>
+								<div class="slide-better-world__body">
+									<div class="slide-better-world__picture">
+										<img src="img/main/better-world/white-cat.webp" alt="The white dog" class="slide-better-world__image">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="better-world__controll">
+							<button type="button" class="better-world__arrow better-world__arrow--right">
+								<svg class="better-world__icon-arrow-right">
+									<use xlink:href="img/icons/icons.svg#right-arrow"></use>
+								</svg>
+							</button>
+							<button type="button" class="better-world__arrow better-world__arrow--left">
+								<svg class="better-world__icon-arrow-left">
+									<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="better-mini-world__slider swiper">
+						<div class="better-mini-world__wrapper swiper-wrapper">
+							<div class="better-mini-world__slide swiper-slide">
+								<div class="better-mini-world__picture-item">
+									<img src="img/main/better-world/white-dog.webp" alt="" class="better-mini-world__image">
+								</div>
+							</div>
+							<div class="better-mini-world__slide swiper-slide">
+								<div class="better-mini-world__picture-item">
+									<img src="img/main/better-world/orange-cat.webp" alt="" class="better-mini-world__image">
+								</div>
+							</div>
+							<div class="better-mini-world__slide swiper-slide">
+								<div class="better-mini-world__picture-item">
+									<img src="img/main/better-world/german-shepherd.webp" alt="" class="better-mini-world__image">
+								</div>
+							</div>
+							<div class="better-mini-world__slide swiper-slide">
+								<div class="better-mini-world__picture-item">
+									<img src="img/main/better-world/white-cat.webp" alt="" class="better-mini-world__image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-us">
+				<div class="about-us__container">
+					<div class="about-us__picture-info-items">
+						<div class="about-us__pictures">
+							<div class="about-us__picture-item">
+								<img src="img/main/about-us/yorkshire.webp" alt="The yorkshire sitting on chair" class="about-us__image">
+							</div>
+						</div>
+						<div class="about-us__info-about-us">
+							<div class="about-us__body-info body-info">
+								<div class="body-info__title">
+									<h2>About us</h2>
+								</div>
+								<div class="body-info__subtitle">
+									<span>Treating pet like Royalty</span>
+								</div>
+								<div class="body-info__block-quote">
+									<blockquotec class="body-info__quote-item">“They're not just pets, they're family”
+									</blockquotec>
+								</div>
+								<div class="body-info__text">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue
+										ultrices, in tempus elit tristique. Aliquam ultrices sem non.
+									</p>
+								</div>
+								<a href="#" class="body-info__btn-explore" target="_blank">Explore</a>
+							</div>
+						</div>
+					</div>
+					<div class="about-us__pet-accosseries pet-accosseries">
+						<div class="pet-accosseries__pet-items">
+							<a href="#" class="pet-accosseries__food-btn" target="_blank">
+								<div class="pet-accosseries__food-item">
+									<svg class="food-icon">
+										<use xlink:href="img/icons/icons.svg#pet-reward"></use>
+									</svg>
+								</div>
+								<div class="pet-accosseries__title-item">
+									<h3>Pet food</h3>
+								</div>
+							</a>
+							<a href="#" class="pet-accosseries__care-btn" target="_blank">
+								<div class="pet-accosseries__care-item">
+									<svg class="syringe-icon">
+										<use xlink:href="img/icons/icons.svg#syringe"></use>
+									</svg>
+								</div>
+								<div class="pet-accosseries__title-item">
+									<h3>Pet care</h3>
+								</div>
+							</a>
+							<a href="#" class="pet-accosseries__accosseries-btn" target="_blank">
+								<div class="pet-accosseries__accessory-item">
+									<svg class="dog-house-icon">
+										<use xlink:href="img/icons/icons.svg#dog-house"></use>
+									</svg>
+								</div>
+								<div class="pet-accosseries__title-item">
+									<h3>pet accessories</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="products">
+				<div class="products__container">
+					<div class="products__our-products">
+						<div class="products__title">
+							<h2>Our Products</h2>
+						</div>
+						<div class="products__sub-title">
+							<span>For all your pet needs</span>
+						</div>
+						<div class="products__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices,
+								in tempus elit.
+							</p>
+						</div>
+					</div>
+					<div class="products__cards-items">
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/sofa.webp" alt="The luxury pet bed" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Luxury pet bed</h3>
+									</div>
+									<span class="card-product__sub-title">$120</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/cat-food-1.webp" alt="The luxury cat food" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Cat Food</h3>
+									</div>
+									<span class="card-product__sub-title">$20</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/dogfood.webp" alt="The luxury dog food" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Dog food</h3>
+									</div>
+									<span class="card-product__sub-title">$30</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/delicious-food.webp" alt="The luxury treat for dog" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Treat for dog</h3>
+									</div>
+									<span class="card-product__sub-title">$60</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/gray-white-kitten.webp" alt="The luxury scratching toy for cat" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Scratching toy for cat</h3>
+									</div>
+									<span class="card-product__sub-title">$200</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/bear-toys.webp" alt="The luxury Teddy bear for dog" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Teddy bear for dog</h3>
+									</div>
+									<span class="card-product__sub-title">$80</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/dog-food-1.webp" alt="The luxury treats knot bone" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Treats Knot Bone</h3>
+									</div>
+									<span class="card-product__sub-title">$8</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+						<div class="products__card-item">
+							<a href="#" class="card-product" target="_blank">
+								<div class="card-product__picture-item">
+									<img src="img/main/products/dog-bowl.webp" alt="The luxury dog bowls" class="card-product__image">
+								</div>
+								<div class="card-product__body">
+									<div class="card-product__title">
+										<h3>Dog bowls</h3>
+									</div>
+									<span class="card-product__sub-title">$70</span>
+								</div>
+								<div data-rating="set" class="rating"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="services">
+				<div class="services__container">
+					<div class="services__picture-info-items">
+						<div class="services__pictures">
+							<div class="services__picture-item">
+								<img src="img/main/services/persian-cat.webp" alt="The cute persian cat sitting on chair" class="services__image">
+							</div>
+						</div>
+						<div class="services__info-services">
+							<div class="services__body-info body-info">
+								<div class="body-info__title body-info__title_white-mod">
+									<h2>Our Services</h2>
+								</div>
+								<div class="body-info__subtitle body-info__subtitle_white-mod">
+									<span>Quality Things for Loving Pets</span>
+								</div>
+								<div class="body-info__block-quote">
+									<blockquotec class="body-info__quote-item body-info__quote-item_white-mod">“More than a Pet
+										Store…”</blockquotec>
+								</div>
+								<div class="body-info__text body-info__text_white-mod">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue
+										ultrices, in tempus elit tristique. Aliquam ultrices sem non.
+									</p>
+								</div>
+								<a href="#" class="body-info__btn-explore body-info__btn-explore_dark-mod" target="_blank">Explore</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pet-care">
+				<div class="pet-care__container">
+					<div class="pet-care__all-types">
+						<div class="pet-care__type">
+							<div class="pet-care__card-pet-care card-pet-care">
+								<div class="card-pet-care__picture card-pet-care__picture_small-item">
+									<img src="img/main/pet-care/image-1.webp" alt="The young woman cares about dog labrodor" class="card-pet-care__image">
+								</div>
+								<div class="card-pet-care__body">
+									<div class="card-pet-care__text">
+										<p>
+											Taking dogs care to the next level
+										</p>
+									</div>
+									<a href="#" class="card-pet-care__btn" target="_blank">
+										<svg class="card-pet-care__left-arrow-icon">
+											<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="pet-care__card-pet-care card-pet-care">
+								<div class="card-pet-care__picture card-pet-care__picture_big-item">
+									<img src="img/main/pet-care/image-2.webp" alt="The veterinar cares about dog's eyes" class="card-pet-care__image">
+								</div>
+								<div class="card-pet-care__body">
+									<div class="card-pet-care__text">
+										<p>
+											We value the best health of your pets
+										</p>
+									</div>
+									<a href="#" class="card-pet-care__btn">
+										<svg class="card-pet-care__left-arrow-icon">
+											<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="pet-care__type-reverse">
+							<div class="pet-care__card-pet-care card-pet-care">
+								<div class="card-pet-care__picture card-pet-care__picture_big-item">
+									<img src="img/main/pet-care/image-3.webp" alt="The young woman cares about dog labrodor" class="card-pet-care__image">
+								</div>
+								<div class="card-pet-care__body">
+									<div class="card-pet-care__text">
+										<p>
+											Taking dogs care to the next level
+										</p>
+									</div>
+									<a href="#" class="card-pet-care__btn" target="_blank">
+										<svg class="card-pet-care__left-arrow-icon">
+											<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="pet-care__card-pet-care card-pet-care">
+								<div class="card-pet-care__picture card-pet-care__picture_small-item">
+									<img src="img/main/pet-care/image-4.webp" alt="The veterinar cares about dog's eyes" class="card-pet-care__image">
+								</div>
+								<div class="card-pet-care__body">
+									<div class="card-pet-care__text">
+										<p>
+											We value the best health of your pets
+										</p>
+									</div>
+									<a href="#" class="card-pet-care__btn">
+										<svg class="card-pet-care__left-arrow-icon">
+											<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-us">
+				<div class="contact-us__container">
+					<div class="contact-us__picture-info-items">
+						<div class="contact-us__our-pets our-pets">
+							<div class="our-pets__sphynx-item">
+								<div class="our-pets__sphynx-picture">
+									<img src="img/main/contact/sphynx-cat.webp" alt=" The woman with her sphynx cat on her hands" class="our-pets__sphynx-image">
+								</div>
+							</div>
+							<div class="our-pets__shpits-item">
+								<div class="our-pets__shpits-picture">
+									<img src="img/main/contact/shpitz-puppy.webp" alt="The funny pomeranian spitz puppy" class="our-pets__shpits-image">
+								</div>
+							</div>
+							<button data-popup="#video-pets" data-popup-youtube="" class="our-pets__video-item">
+								<svg class="our-pets__play-icon">
+									<use xlink:href="img/icons/icons.svg#btn-play">
+									</use>
+								</svg>
+							</button>
+						</div>
+						<div class="contact-us__info-contact-us">
+							<div class="contact-us__body-info body-info">
+								<div class="body-info__title">
+									<h2>Contact us</h2>
+								</div>
+								<div class="body-info__subtitle body-info__subtitle_contact-mod">
+									<span>Come for the care, leave with a smile</span>
+								</div>
+								<div class="body-info__work-ours">
+									<p>
+										Monday/Friday 9:00-23:00
+										Saturday 10:00-21:00
+									</p>
+								</div>
+								<a href="tel:0123456789" class="body-info__phone">+012-345-6789</a>
+								<a href="mailto:thewildkingdom@contact.com" class="body-info__mail">thewildkingdom@contact.com</a>
+								<div class="body-info__address">
+									<p>
+										9889 Lorem Ipsum street, Pellentesque, CA, USA
+									</p>
+								</div>
+								<a href="#" class="body-info__btn-explore" target="_blank">Explore</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pet-dialog">
+				<div class="pet-dialog__container">
+					<div class="pet-dialog__slider swiper">
+						<div class="pet-dialog__wrapper swiper-wrapper">
+							<div class="pet-dialog__slide-pet-dialog slide-pet-dialog swiper-slide">
+								<div class="slide-pet-dialog__body">
+									<div class="slide-pet-dialog__picture">
+										<svg class="slide-pet-dialog__icon-pet-dialog">
+											<use xlink:href="img/icons/icons.svg#pet-dialog"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="slide-pet-dialog__content">
+									<svg class="slide-pet-dialog__icon-first-quote">
+										<use xlink:href="img/icons/icons.svg#first-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate pharetra ante
+											id congue. Cras feugiat, diam a placerat posuere, arcu risus porta elit, sed finibus
+											magna lorem ut turpis.</p>
+									</div>
+									<svg class="slide-pet-dialog__icon-last-quote">
+										<use xlink:href="img/icons/icons.svg#last-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__title">
+										<h2>Etiam vulputate</h2>
+									</div>
+								</div>
+							</div>
+							<div class="pet-dialog__slide-pet-dialog slide-pet-dialog swiper-slide">
+								<div class="slide-pet-dialog__body">
+									<div class="slide-pet-dialog__picture">
+										<svg class="slide-pet-dialog__icon-pet-dialog">
+											<use xlink:href="img/icons/icons.svg#pet-dialog"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="slide-pet-dialog__content">
+									<svg class="slide-pet-dialog__icon-first-quote">
+										<use xlink:href="img/icons/icons.svg#first-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate pharetra ante
+											id congue. Cras feugiat, diam a placerat posuere, arcu risus porta elit, sed finibus
+											magna lorem ut turpis.</p>
+									</div>
+									<svg class="slide-pet-dialog__icon-last-quote">
+										<use xlink:href="img/icons/icons.svg#last-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__title">
+										<h2>Etiam vulputate</h2>
+									</div>
+								</div>
+							</div>
+							<div class="pet-dialog__slide-pet-dialog slide-pet-dialog swiper-slide">
+								<div class="slide-pet-dialog__body">
+									<div class="slide-pet-dialog__picture">
+										<svg class="slide-pet-dialog__icon-pet-dialog">
+											<use xlink:href="img/icons/icons.svg#pet-dialog"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="slide-pet-dialog__content">
+									<svg class="slide-pet-dialog__icon-first-quote">
+										<use xlink:href="img/icons/icons.svg#first-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate pharetra ante
+											id congue. Cras feugiat, diam a placerat posuere, arcu risus porta elit, sed finibus
+											magna lorem ut turpis.</p>
+									</div>
+									<svg class="slide-pet-dialog__icon-last-quote">
+										<use xlink:href="img/icons/icons.svg#last-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__title">
+										<h2>Etiam vulputate</h2>
+									</div>
+								</div>
+							</div>
+							<div class="pet-dialog__slide-pet-dialog slide-pet-dialog swiper-slide">
+								<div class="slide-pet-dialog__body">
+									<div class="slide-pet-dialog__picture">
+										<svg class="slide-pet-dialog__icon-pet-dialog">
+											<use xlink:href="img/icons/icons.svg#pet-dialog"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="slide-pet-dialog__content">
+									<svg class="slide-pet-dialog__icon-first-quote">
+										<use xlink:href="img/icons/icons.svg#first-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate pharetra ante
+											id congue. Cras feugiat, diam a placerat posuere, arcu risus porta elit, sed finibus
+											magna lorem ut turpis.</p>
+									</div>
+									<svg class="slide-pet-dialog__icon-last-quote">
+										<use xlink:href="img/icons/icons.svg#last-quote"></use>
+									</svg>
+									<div class="slide-pet-dialog__title">
+										<h2>Etiam vulputate</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pet-dialog__controll-buttons">
+							<button type="button" class="pet-dialog__arrow pet-dialog__arrow--right">
+								<svg class="pet-dialog__icon-arrow-right">
+									<use xlink:href="img/icons/icons.svg#right-arrow"></use>
+								</svg>
+							</button>
+							<button type="button" class="pet-dialog__arrow pet-dialog__arrow--left">
+								<svg class="pet-dialog__icon-arrow-left">
+									<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__menu-socials">
+						<div data-spollers="767.98,max" class="footer__content">
+							<details class="footer__menu menu-footer">
+								<summary class="menu-footer__title-item">
+									<h1>Sitemap</h1>
+								</summary>
+								<ul class="menu-footer__list">
+									<li class="menu-footer__item">
+										<a href="home.html" class="menu-footer__link">Home</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="about-us.html" class="menu-footer__link">About</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="products.html" class="menu-footer__link">Products</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="services.html" class="menu-footer__link">Services</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div class="footer__socials socials-footer">
+							<ul class="socials-footer__list">
+								<li class="socials-footer__item">
+									<a href="https://twitter.com/" class="socials-footer__link" target="_blank">
+										<svg class="socials-footer__twitter-icon">
+											<use xlink:href="img/icons/icons.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials-footer__item">
+									<a href="https://www.facebook.com/" class="socials-footer__link" target="_blank">
+										<svg class="socials-footer__facebook-icon">
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials-footer__item">
+									<a href="https://www.instagram.com/" class="socials-footer__link" target="_blank">
+										<svg class="socials-footer__instagram-icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials-footer__item">
+									<a href="https://www.tiktok.com/" class="socials-footer__link" target="_blank">
+										<svg class="socials-footer__tik-tok-icon">
+											<use xlink:href="img/icons/icons.svg#tic-toc"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__logo-footer logo-footer">
+						<svg class="logo-footer__logo-icon">
+							<use xlink:href="img/icons/icons.svg#logo"></use>
+						</svg>
+					</div>
+					<div class="footer__subscribe subscribe">
+						<div class="subscribe__body">
+							<div class="subscribe__text-item">
+								<p>
+									Treating all the pets present here like royalty.
+								</p>
+							</div>
+							<form class="subscribe__form">
+								<div class="subscribe__mail-item">
+									<input data-error="Error" data-required="email" data-validate="email" autocomplete="off" required type="email" name="form[]" placeholder="Enter email address" class="subscribe__mail-input">
+								</div>
+								<button type="submit" class="subscribe__btn-subscribe">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="footer__link-arrow-up">
+					<svg class="footer__up-arrow-icon">
+						<use xlink:href="img/icons/icons.svg#up-arrow"></use>
+					</svg>
+				</a>
+				<div class="footer__copyright copyright">
+					<div class="copyright__text-item">
+						<p>Copyright Dotcreativemarket</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240702182045"></script>
+</body>
+
+</html>
